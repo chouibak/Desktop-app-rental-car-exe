@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LocAgence Pro — Téléchargement</title>
+  <meta name="description" content="Téléchargez LocAgence Pro, le logiciel de gestion pour agences de location de voitures au Maroc." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-badge">Version 1.0.4 · Windows</div>
+      <h1>LocAgence Pro</h1>
+      <p class="hero-sub">
+        Logiciel de gestion pour agences de location de voitures — contrats, réservations, paiements, flotte et dépenses.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="LocAgencePro-Setup-1.0.4.exe" download>
+          Télécharger l'installateur
+        </a>
+        <a class="btn btn-secondary" href="CLE-ESSAI-7-JOURS.txt" download>
+          Clé essai 7 jours (.txt)
+        </a>
+      </div>
+      <p class="hero-meta">LocAgencePro-Setup-1.0.4.exe · Installation Windows</p>
+    </header>
+
+    <main class="grid">
+      <section class="card card-key">
+        <div class="card-label">Essai gratuit</div>
+        <h2>Clé d'essai — 7 jours</h2>
+        <p>Copiez cette clé et collez-la au premier lancement de l'application.</p>
+        <div class="key-box">
+          <code id="trial-key">RCRM-TRIAL-7D-CK9M2X8P4N6W</code>
+          <button type="button" class="btn-copy" id="copy-btn" aria-label="Copier la clé">Copier</button>
+        </div>
+        <p class="hint">La clé est aussi disponible dans le fichier <a href="CLE-ESSAI-7-JOURS.txt" download>CLE-ESSAI-7-JOURS.txt</a>.</p>
+      </section>
+
+      <section class="card">
+        <div class="card-label">Installation</div>
+        <h2>Comment installer</h2>
+        <ol class="steps">
+          <li>Téléchargez <strong>LocAgencePro-Setup-1.0.4.exe</strong></li>
+          <li>Lancez l'installateur et suivez les étapes</li>
+          <li>Ouvrez LocAgence Pro depuis le bureau</li>
+          <li>Entrez la clé d'essai 7 jours</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <div class="card-label">Fonctionnalités</div>
+        <h2>Ce que vous obtenez</h2>
+        <ul class="features">
+          <li>Gestion véhicules, clients et chauffeurs</li>
+          <li>Contrats PDF et réservations</li>
+          <li>Suivi des paiements et dépenses par voiture</li>
+          <li>Alertes documents & retours véhicules</li>
+          <li>Tableau de bord et statistiques</li>
+        </ul>
+      </section>
+
+      <section class="card card-contact">
+        <div class="card-label">Licence à vie</div>
+        <h2>Besoin de la version complète ?</h2>
+        <p>Contactez le vendeur pour obtenir une clé à vie après votre essai.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 LocAgence Pro · Application bureau pour agences de location au Maroc</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Clé copiée !</div>
+
+  <script>
+    const key = document.getElementById('trial-key').textContent.trim();
+    const btn = document.getElementById('copy-btn');
+    const toast = document.getElementById('toast');
+
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(key);
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      } catch {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('trial-key'));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      }
+    });
+  </script>
+</body>
+</html>
