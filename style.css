@@ -219,6 +219,30 @@ body {
   background: #f8fafc;
 }
 
+.card-notice {
+  grid-column: 1 / -1;
+  background: linear-gradient(180deg, #fffbeb 0%, #fff 100%);
+  border-color: #fcd34d;
+}
+
+.card-notice .card-label {
+  color: #b45309;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: var(--accent-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   text-align: center;
   margin-top: 28px;
