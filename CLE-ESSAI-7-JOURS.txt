@@ -4,7 +4,7 @@ LocAgence Pro — Clé d'essai gratuite (7 jours)
 Clé : RCRM-TRIAL-7D-CK9M2X8P4N6W
 
 Instructions :
-1. Téléchargez et installez LocAgencePro-Setup-1.0.10.exe
+1. Téléchargez et installez LocAgencePro-Setup-1.0.11.exe
 2. Lancez l'application
 3. Entrez la clé ci-dessus dans la fenêtre d'activation
 4. Connectez-vous avec vos identifiants
