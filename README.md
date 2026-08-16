@@ -6,7 +6,7 @@ Page de téléchargement publique pour **LocAgence Pro** (Windows).
 
 - `index.html` — page de téléchargement
 - `style.css` — styles
-- `LocAgencePro-Setup-1.0.11.exe` — installateur Windows (v1.0.11)
+- `LocAgencePro-Setup-1.0.12.exe` — installateur Windows (v1.0.12)
 - `CLE-ESSAI-7-JOURS.txt` — clé d'essai gratuite 7 jours
 
 ## GitHub Pages
